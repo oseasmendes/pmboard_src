@@ -1,0 +1,45 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Projetosentregasreqsref $projetosentregasreqsref
+ */
+?>
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Html->link(__('List Projetosentregasreqsrefs'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Projetosentregasreqs'), ['controller' => 'Projetosentregasreqs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Projetosentregasreq'), ['controller' => 'Projetosentregasreqs', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Statusfuncionals'), ['controller' => 'Statusfuncionals', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Statusfuncional'), ['controller' => 'Statusfuncionals', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Projetosentregasreqsrefsimgs'), ['controller' => 'Projetosentregasreqsrefsimgs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Projetosentregasreqsrefsimg'), ['controller' => 'Projetosentregasreqsrefsimgs', 'action' => 'add']) ?></li>
+    </ul>
+</nav>
+<div class="projetosentregasreqsrefs form large-9 medium-8 columns content">
+    <?= $this->Form->create($projetosentregasreqsref) ?>
+    <fieldset>
+        <legend><?= __('Add Projetosentregasreqsref') ?></legend>
+        <?php
+            echo $this->Form->control('projetosentregasreq_id', ['options' => $projetosentregasreqs, 'empty' => true,'class'=>['class'=> 'form-control']]);
+            echo $this->Form->control('requisitostipo_id');
+            echo $this->Form->control('referencia',['class'=> "form-control"]);
+            echo $this->Form->control('descricao',['class'=> "form-control"]);
+            echo $this->Form->control('requisito',['class'=> "form-control"]);
+            echo $this->Form->control('restricao',['class'=> "form-control"]);
+            echo $this->Form->control('descricaorisco',['class'=> "form-control"]);
+            echo $this->Form->control('prerequisito');
+            echo $this->Form->control('precedente');
+            echo $this->Form->control('risco');
+            echo $this->Form->control('teste');
+            echo $this->Form->control('cancelled');
+            echo $this->Form->control('statusfuncional_id', ['options' => $statusfuncionals, 'empty' => true,'class'=>['class'=> 'form-control']]);
+            echo $this->Form->control('motivo_id', ['options' => $motivos, 'empty' => true,'class'=>['class'=> 'form-control']]);
+            echo $this->Form->control('representatividade', ['options' => ['NECESSARIO'=>'NECESSARIO','VERIFICAVEL'=>'VERIFICAVEL','ATINGIVEL'=>'ATINGIVEL','CLARO'=>'CLARO'],'class'=>['class'=> 'form-control'] , 'empty' => true]);
+            echo $this->Form->control('agrupamento', ['options' => ['ESSENCIAL'=>'ESSENCIAL','IMPORTANTE'=>'IMPORTANTE','DESEJAVEL'=>'DESEJAVEL'],'class'=>['class'=> 'form-control'] , 'empty' => true]);
+            echo $this->Form->control('pmg', ['options' => ['P'=>'PEQUENO','M'=>'MEDIO','G'=>'GRANDE'],'class'=>['class'=> 'form-control'] , 'empty' => true]);
+        ?>
+    </fieldset>
+    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->end() ?>
+</div>

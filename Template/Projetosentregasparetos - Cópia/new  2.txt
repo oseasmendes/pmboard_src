@@ -1,0 +1,98 @@
+string sql = "INSERT INTO calendariosplanos (" +
+"descricao," +
+"calendariostipo_id," +
+"horainicio," +
+"horafim," +
+"horaalmocoinicio," +
+"horaalmocofim," +
+"primeiraparadainicio," +
+"primeiraparadafim," +
+"segundaparadainicio," +
+"segundaparadafim," +
+"terceiraparadainicio," +
+"terceiraparadafim," +
+"quartaparadainicio," +
+"quartaparadafim," +
+"tempoabertura," +
+"tempoparadaprogramada," +
+"tempodisponivel," +
+"considerarcrossday," +
+"created," +
+"modified," +
+"empresa_id" +
+") VALUES ("
+@descricao
+@calendariostipoid
+@horainicio
+@horafim
+@horaalmocoinicio
+@horaalmocofim
+@primeiraparadainicio
+@primeiraparadafim
+@segundaparadainicio
+@segundaparadafim
+@terceiraparadainicio
+@terceiraparadafim
+@quartaparadainicio
+@quartaparadafim
+@tempoabertura
+@tempoparadaprogramada
+@tempodisponivel
+@considerarcrossday
+@created
+@modified
+@empresaid
+")";
+
+
+CalendariosTipoId 
+HoraInicio 
+HoraFim 
+HoraAlmocoInicio 
+HoraAlmocoFim 
+PrimeiraParadaInicio 
+PrimeiraParadaFim 
+SegundaParadaInicio 
+SegundaParadaFim 
+TerceiraParadaInicio 
+TerceiraParadaFim 
+QuartaParadaInicio 
+QuartaParadaFim 
+TempoAbertura 
+TempoParadaProgramada 
+TempoDisponivel 
+ConsiderarCrossDay 
+Created 
+Modified 
+EmpresaId 
+
+
+
+descricao
+calendariostipo_id
+horainicio
+horafim
+horaalmocoinicio
+horaalmocofim
+primeiraparadainicio
+primeiraparadafim
+segundaparadainicio
+segundaparadafim
+terceiraparadainicio
+terceiraparadafim
+quartaparadainicio
+quartaparadafim
+tempoabertura
+tempoparadaprogramada
+tempodisponivel
+considerarcrossday
+created
+modified
+empresa_id
+
+
+
+TempoPrimeiraParada
+TempoSegundaParada
+TempoTerceiraParada
+TempoQuartaParada
